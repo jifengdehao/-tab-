@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>tab组件开发</title>
+		<style type="text/css">
+		    html{
+		    	height: 100%;
+		    	width: 100;
+		    	font-size: 62.5%;
+		    	font-family: "微软雅黑";
+		    	-webkit-text-size-adjust: 100%;
+		    }
+		    body{
+		    	font-size: 14px;
+		    	line-height: 1.4258;
+		    	background-color:#d6d6d6;
+		    	color: #6d6d6d;
+		    }
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			a{
+				color:inherit;
+				text-decoration: none;
+			}
+			#tab{
+				width: 100%;
+				margin: 0 auto;
+			}
+			#tab .tab-title{
+				width: 100%;
+				height: 50px;
+				line-height: 50px;
+				background-color: #fff;
+				table-layout: fixed;
+				border-bottom: 1px solid #DDDDDD;
+			}
+		    #tab .tab-title li{
+		    	text-align: center;
+				width: 1%;
+				display: table-cell;
+		    }
+			#tab .tab-title li a{
+				position: relative;
+				top: -1px;
+				padding:14px 15px 15px 15px;
+			
+			}
+			#tab .tab-content{
+				width: 100%;
+				padding: 10px 15px;
+				background-color: #FFFFFF;
+				display: none;
+			}
+			.active{
+				border-bottom: 2px solid #ff5722;
+				color: #ff5722;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<!--<div id="tab">
+			<ul class="tab-title">
+			     <li><a href="javascript:;" class="active">1</a></li>
+			     <li><a href="javascript:;">2</a></li>
+			     <li><a href="javascript:;">3</a></li>
+			     <li><a href="javascript:;">4</a></li>
+			</ul>
+			<div class="tab-content" style="display: block;">1111</div>
+			<div class="tab-content">2222</div>
+			<div class="tab-content">3333</div>
+			<div class="tab-content">4444</div>
+		</div>-->
+		<script type="text/javascript" src="js/tab.js" ></script>
+		<script>
+		tab.init({
+			'title':['首页','金卡','少时','刷卡'],
+			"content":['订单','2订单2的2','DVD','的的'],
+			"iNow":3
+		});
+			/*function Tab(){
+				this.oParent=null;
+				this.aChild=null;
+				this.aDiv=null;
+			}
+			Tab.prototype.init=function(obj){
+				this.oParent=document.getElementById(obj);
+				this.aChild=this.oParent.getElementsByClassName('tab-title')[0].getElementsByTagName('a');
+				this.aDiv=this.oParent.getElementsByClassName('tab-content');
+				
+				this.change();
+			}
+			Tab.prototype.change=function(){
+				for(var i=0;i<this.aChild.length;i++){
+					var This=this;
+				    This.aChild[i].index=i;
+				    
+					this.aChild[i].onclick=function(){	
+						
+						for(var i=0;i<This.aChild.length;i++){
+							
+							This.aChild[i].className="";
+							
+							This.aDiv[i].style.display="none";
+						}
+						this.className="active";
+						
+						This.aDiv[this.index].style.display="block";
+					}
+				}
+			}
+			
+			var tab=new Tab();
+			tab.init('tab');
+			*/
+			
+		</script>
+	</body>
+</html>
